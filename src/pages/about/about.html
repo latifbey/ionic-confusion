@@ -16,10 +16,10 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="about-page">
   <ion-card>
     <ion-card-content>
-      <ion-card-title>
+      <ion-card-title  color="primary">
         Our History
       </ion-card-title>
       <p> Started in 2010, Ristorante con Fusion quickly established itself as a culinary icon par excellence in Hong Kong. With
@@ -30,19 +30,19 @@
   </ion-card>
   <ion-card>
     <ion-card-content>
-      <ion-card-title>
-       corporate Leadership
+      <ion-card-title color="primary">
+       Corporate Leadership
       </ion-card-title>
-      <div class="row" *ngFor="let person of leaders">
-        <div class="col">
-          aaaa
-        </div>
-        <div class="col col-75">
-          in 2010, Ristorante con Fusion quickly established itself as a culinary icon par excellence in Hong Kong. With
-          its unique brand of world fusion cuisine that can be found nowhere else, it enjoys patronage from the A-list clientele
-          in Hong Kong. Featuring four
-        </div>
-      </div>
+        <ion-list>
+          <ion-item  *ngFor="let leader of leaders">
+            <ion-avatar item-start>
+              <img src="{{BaseURL + leader.image }}">
+            </ion-avatar>
+            <h2>{{leader.name}}</h2>
+            <h3>{{leader.designation}}</h3>
+            <p>{{leader.description}}</p>
+          </ion-item>
+        </ion-list>
     </ion-card-content>
   </ion-card>
 </ion-content>
