@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -11,10 +14,11 @@ import { ContactPage } from '../pages/contact/contact';
 import { DishdetailPage } from '../pages/dishdetail/dishdetail';
 import { FavoritesPage } from '../pages/favorites/favorites';
 import { ReservationPage } from '../pages/reservation/reservation';
+
+
 import { baseURL } from '../shared/baseurl';
 
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
+
 import { DishProvider } from '../providers/dish/dish';
 import { ProcessHttpmsgProvider } from '../providers/process-httpmsg/process-httpmsg';
 import { LeaderProvider } from '../providers/leader/leader';
